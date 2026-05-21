@@ -11,7 +11,7 @@
                            FontSize="24"
                            FontAttributes="Bold"
                            TextColor="White"/>
-                    <Label x:Name="lblDescripcion"
+                    <Label x:Name="lblCategoria"
                            TextColor="#bbccff"
                            FontSize="14"/>
                 </VerticalStackLayout>
@@ -26,14 +26,24 @@
             
             <!-- Descripcion -->
             <Label Text="Descripcion: " FontAttributes="Bold" />
-            <Label x:Name="lblDescripcionCompleta" LineBreakMode="WordWrap" />
+            <Label x:Name="lblDescripcion" LineBreakMode="WordWrap" />
             
             <!-- Id del producto-->
             <Label x:Name="lblId" TextColor="#AAAAAA" FontSize="12" />
-
-
-
-
+            
+            <!--Botones de accion-->
+            <Button Text="Agregar al Carrito"
+                    Clicked="OnAgregarClicked"
+                    BackgroundColor="#1a7a4a"
+                    TextColor="White"
+                    CornerRadius="10" />
+            <Button Text="Volver a la lista"
+                    Clicked="OnVolverClicked"
+                    BackgroundColor="Transparent"
+                    TextColor="#1e4d8c"
+                    BorderColor="#1e4d8c"
+                    BorderWidth="1.5"
+                    CornerRadius="10" />
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

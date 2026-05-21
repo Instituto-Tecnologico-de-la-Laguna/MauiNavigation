@@ -7,8 +7,7 @@
     Title="MauiNavigation">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
+        Title="Productos"
+        ContentTemplate="{DataTemplate Pages:ListaPage}"
         Route="MainPage" />
-
 </Shell>
