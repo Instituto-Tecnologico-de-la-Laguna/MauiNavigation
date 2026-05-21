@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiNavigation.Pages.DetallePage"
+             Title="DetallePage">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="14">
+            <Frame BackgroundColor="#1e4d8c" CornerRadius="12" Padding="20">
+                <VerticalStackLayout>
+                    <Label x:Name="lblNombre"
+                           FontSize="24"
+                           FontAttributes="Bold"
+                           TextColor="White"/>
+                    <Label x:Name="lblDescripcion"
+                           TextColor="#bbccff"
+                           FontSize="14"/>
+                </VerticalStackLayout>
+            </Frame>
+            
+            <!-- Precio Destacado -->
+            <Label x:Name="lblPrecio"
+                   FontSize="36"
+                   FontAttributes="Bold"
+                   TextColor="#1a7a4a"
+                   HorizontalOptions="Center"/>
+            
+            <!-- Descripcion -->
+            <Label Text="Descripcion: " FontAttributes="Bold" />
+            <Label x:Name="lblDescripcionCompleta" LineBreakMode="WordWrap" />
+            
+            <!-- Id del producto-->
+            <Label x:Name="lblId" TextColor="#AAAAAA" FontSize="12" />
+
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
