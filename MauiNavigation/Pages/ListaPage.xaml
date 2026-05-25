@@ -9,13 +9,16 @@
                     SelectionChanged="OnProductoSeleccionado">
         <CollectionView.ItemTemplate>
             <DataTemplate>
-                <Frame Margin=".6" CornerRadius="10" Padding="14">
+                <Border Margin="0,4" Padding="14"
+                        StrokeShape="RoundRectangle 10"
+                        StrokeThickness="1"
+                        Stroke="#e0e0e0">
                     <Grid ColumnDefinitions="*,Auto">
                         <VerticalStackLayout Grid.Column="0" Spacing="4">
                             <Label Text="{Binding Nombre}"
                                    FontAttributes="Bold" FontSize="16"/>
                             <Label Text="{Binding Categoria}"
-                                   TextColor="#888888" FontSize="13"/>                      
+                                   TextColor="#888888" FontSize="13"/>
                         </VerticalStackLayout>
                         <Label Grid.Column="1"
                                Text="{Binding PrecioFormateado}"
@@ -23,8 +26,8 @@
                                TextColor="#1a7a4a"
                                FontSize="18"
                                VerticalOptions="Center"/>
-                    </Grid>                    
-                </Frame>
+                    </Grid>
+                </Border>
             </DataTemplate>
         </CollectionView.ItemTemplate>        
     </CollectionView>

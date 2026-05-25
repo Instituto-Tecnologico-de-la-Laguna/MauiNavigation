@@ -20,14 +20,14 @@ public partial class ListaPage : ContentPage
 
 	private async void OnProductoSeleccionado(object sender, SelectionChangedEventArgs e)
 	{
-		if (e.CurrentSelection.FirstOrDefault() is not Producto seleccionados)
-		{
-
+		if (e.CurrentSelection.FirstOrDefault() is not Producto seleccionado)
 			return;
-		}
-		listaProductos .SelectedItem = null;
 
-		await Navigation.PushAsync(new DetallePage(seleccionados));
+		listaProductos.SelectedItem = null;
 
-    }
+		await Shell.Current.GoToAsync(nameof(DetallePage), new Dictionary<string, object>
+		{
+			["Producto"] = seleccionado
+		});
+	}
 }

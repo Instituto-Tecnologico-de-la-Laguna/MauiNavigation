@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using MauiNavigation.Pages;
 
 namespace MauiNavigation
 {
@@ -14,6 +15,9 @@ namespace MauiNavigation
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
+
+            builder.Services.AddTransient<ListaPage>();
+            builder.Services.AddTransient<DetallePage>();
 
 #if DEBUG
     		builder.Logging.AddDebug();
